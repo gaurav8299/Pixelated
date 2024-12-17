@@ -1,0 +1,122 @@
+/* Set padding for all HTML elements */
+html {
+  padding: 0.7rem;
+}
+
+/* Define a custom font named "pixel" */
+@font-face {
+  font-family: "pixel";
+  src: url(assets/pixel.ttf);
+  font-display: swap;
+}
+
+/* Define another custom font named "sabo" */
+@font-face {
+  font-family: "sabo";
+  src: url(assets/Sabo-Filled.otf) format("opentype");
+  font-display: swap;
+}
+
+/* Define root level variables for colors */
+:root {
+  --background: #0c0c0e;
+  --text: #ff79c5e3;
+  --subtext: #bd93f9bd;
+}
+
+/* Apply background image and color to the body */
+body {
+  background-image: url(assets/nnnoise.svg), url(assets/svg-shape-1.svg);
+  /* Combine both background images */
+  background-color: var(--background);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, top;
+  /* Position both images */
+  background-size: cover, contain;
+  /* Adjust the sizes */
+}
+
+/* Style for section with class "sec1" */
+.sec1 {
+  position: relative;
+  min-height: 100vh;
+  /* Ensure full-screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for title element */
+.title {
+  color: var(--subtext);
+  font-size: 6.69rem;
+  font-family: "pixel", cursive;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+/* Style for sub-title element */
+.sub-title {
+  color: var(--text);
+  font-size: 2.9rem;
+  font-family: "pixel", cursive;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+/* Style for description element without animation */
+/* Style for description element */
+/* Style for description element */
+.description {
+  font-size: 1.4rem;
+  font-family: "sabo", cursive;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  /* Higher than other elements */
+  text-align: center;
+  padding: 0rem clamp(1rem, 2vw, 3rem);
+  border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  color: var(--text);
+  /* Consistent color */
+  opacity: 1;
+  pointer-events: none;
+  /* Prevent interactions */
+}
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 1362px) {
+  .title {
+    font-size: 6rem;
+  }
+
+  .sub-title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1172px) {
+  .title {
+    font-size: 5.7rem;
+  }
+
+  .sub-title {
+    font-size: 2.1rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+}
